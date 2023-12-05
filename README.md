@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@rmcd-mscb](https://github.com/rmcd-mscb/)
 
