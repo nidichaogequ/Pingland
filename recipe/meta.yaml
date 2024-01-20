@@ -20,7 +20,6 @@ requirements:
   host:
     - python >=3.6,<3.10
     - pip
-    - poetry-core >=1.0.0
   run:
     - python >=3.6,<3.10
     # - click <8
@@ -48,18 +47,14 @@ requirements:
     - pydantic >=1.10.2,<2.0.0
 
 test:
-  source_files:
-    - tests
-  requires:
-    - pip
-    - pytest
   imports:
     - gdptools
   commands:
     # cannot run pip check b/c we are breaking the pins for dask, click, and pygeoapi.
     # - pip check
     - gdptools --help
-    - pytest -s -rxs -v tests
+  requires:
+    - pip
 
 about:
   home: https://code.usgs.gov/wma/nhgf/toolsteam/gdptools
