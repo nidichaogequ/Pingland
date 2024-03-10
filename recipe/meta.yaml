@@ -14,7 +14,7 @@ build:
     - gdptools = gdptools.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -33,6 +33,23 @@ requirements:
     - attrs >=21.4.0
     - pydantic >=1.9.0
     - xarray >=0.21.1
+    # xarray[io]
+    - netCDF4
+    - h5netcdf
+    - scipy
+    - zarr
+    - fsspec
+    - cftime
+    - rasterio
+    - cfgrib
+    - pooch
+    # xarray[accel]
+    - scipy
+    - bottleneck
+    - flox
+    # xarray[parallel]
+    # dask[complete]
+    - dask
 
 test:
   imports:
