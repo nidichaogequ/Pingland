@@ -1,5 +1,5 @@
 {% set name = "gdptools" %}
-{% set version = "0.0.25.dev0" %}
+{% set version = "0.0.25.dev2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gdptools-{{ version }}.tar.gz
-  sha256: cc1e6efdd355b341598093ce1f3f5b6f73387ea720300ebca27d84e2975c9f13
+  sha256: 76ad4717671e4c028bbd2409a8df336c2de3c157108279dede50e25a535182f5
 
 build:
   entry_points:
     - gdptools = gdptools.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -32,24 +32,22 @@ requirements:
     - metpy >=1.2.0
     - attrs >=21.4.0
     - pydantic >=1.9.0
-    - xarray >=0.21.1
+    - xarray >=2022.6.0,<2023.0.0
+    - netcdf4 >=1.6.1,<2.0.0
+    - scipy >=1.9.1,<2.0.0
+    - pydap >=3.2.2,<4.0.0
+    - zarr >=2.13.1,<3.0.0
+    - rasterio >=1.3.2,<2.0.0
+    - bottleneck >=1.3.5,<2.0.0
+    - dask >=2022.9.1,<2023.0.0
     # xarray[io]
-    - netCDF4
     - h5netcdf
-    - scipy
-    - zarr
     - fsspec
     - cftime
-    - rasterio
     - cfgrib
     - pooch
     # xarray[accel]
-    - scipy
-    - bottleneck
     - flox
-    # xarray[parallel]
-    # dask[complete]
-    - dask
 
 test:
   imports:
