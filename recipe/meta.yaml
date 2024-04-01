@@ -1,5 +1,5 @@
 {% set name = "gdptools" %}
-{% set version = "0.0.25.dev2" %}
+{% set version = "0.0.25.dev3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gdptools-{{ version }}.tar.gz
-  sha256: 76ad4717671e4c028bbd2409a8df336c2de3c157108279dede50e25a535182f5
+  sha256: 37f66c3b0f08e6585e833465b9f8fbece05209aa6b7f748e7090d5021b00ed89
 
 build:
   entry_points:
