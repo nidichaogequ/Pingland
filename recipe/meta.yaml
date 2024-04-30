@@ -1,5 +1,5 @@
 {% set name = "gdptools" %}
-{% set version = "0.0.25.dev5" %}
+{% set version = "0.0.25.dev6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gdptools-{{ version }}.tar.gz
-  sha256: 46568f6a2f50561141ceb8ab48af0170ab2f295c22da0d034796090e377c2e48
+  sha256: 98cb62b13ef81a2726941275ae45859474b4864dcc4d5d5928b546bec8835cfd
 
 build:
   entry_points:
@@ -32,14 +32,14 @@ requirements:
     - metpy >=1.2.0
     - attrs >=21.4.0
     - pydantic >=1.9.0
-    - xarray >=2022.6.0,<2023.0.0
-    - netcdf4 >=1.6.1,<2.0.0
+    - xarray >=2022.6.0
+    - netcdf4 <=1.6.1
     - scipy >=1.9.1,<2.0.0
     - pydap >=3.2.2,<4.0.0
     - zarr >=2.13.1,<3.0.0
-    - rasterio >=1.3.2,<2.0.0
+    - rasterio >=1.2.9
     - bottleneck >=1.3.5,<2.0.0
-    - dask >=2022.9.1,<2023.0.0
+    - dask >=2022.0.0
     # xarray[io]
     - h5netcdf
     - fsspec
