@@ -1,5 +1,5 @@
 {% set name = "gdptools" %}
-{% set version = "0.0.28" %}
+{% set version = "0.0.29" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gdptools-{{ version }}.tar.gz
-  sha256: 5a85112ca458d4ba9c0fe34da0448065aa75449135bbf21e67254e3e8b9d6bef
+  sha256: 30028779b5424d0892c131b7042c1a30a56d46d395093b0a9749292f1af2d3c1
 
 build:
   entry_points:
@@ -22,11 +22,12 @@ requirements:
     - pip
     - poetry-core >=1.0.0
   run:
+    - dask-core >=2022.0.0
     - python >=3.6,<3.11
     - pandas >=1.4.0
-    - numpy >=1.21.0,<1.24.0
+    - numpy <1.24.0
     - geopandas >=0.11.0
-    - shapely >=1.8.1,<2.0.0
+    - shapely <2.0.0
     - pygeos >=0.12.0
     - pyproj >=3.3.0
     - metpy >=1.2.0
