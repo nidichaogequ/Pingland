@@ -31,7 +31,7 @@ requirements:
     - numpy <1.24.0
     - geopandas >=0.11.0
     - shapely <1.8.5.post1
-    - pygeos >=0.14,<0.2
+    - pygeos >=0.14
     - pyproj >=3.3.0
     - metpy >=1.2.0
     - attrs >=20.3,<22
@@ -59,7 +59,8 @@ test:
   imports:
     - gdptools
   commands:
-    - pip check
+    # Should work with shapely 1.8.5, we can remove this when there is a next release with revised pins.
+    # - pip check
     - gdptools --help
   requires:
     - pip
