@@ -1,5 +1,5 @@
 {% set name = "gdptools" %}
-{% set version = "0.0.33" %}
+{% set version = "0.0.34" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gdptools-{{ version }}.tar.gz
-  sha256: 720488ec19f736c062c6bba909f873a7a6e795f4ff8b69b0ddeff03a027a08a6
+  sha256: 010b206b202bcff6ca1285676cd822e9738bb5bde5dd5a603cd82f87291a2ddb
 
 build:
   entry_points:
@@ -30,14 +30,14 @@ requirements:
     - pandas >=1.4.0
     - numpy <1.24.0
     - geopandas >=0.11.0
-    - shapely <1.8.5.post1
-    - pygeos >=0.14
+    - shapely <2.0.0
+    - pygeos >=0.14.0,<0.15.0
     - pyproj >=3.3.0
     - metpy >=1.2.0
     - attrs >=20.3,<22
     - pydantic >=1.9.0
     - xarray >=2022.6.0
-    - netcdf4 <=1.6.1
+    - netcdf4 >=1.5.8
     - scipy >=1.9.0
     - pydap >=3.2.2,<4.0.0
     - zarr >=2.12.0
