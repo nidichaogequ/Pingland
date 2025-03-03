@@ -1,11 +1,11 @@
-About gdptools
-==============
+About gdptools-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gdptools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://code.usgs.gov/wma/nhgf/toolsteam/gdptools
 
 Package license: Unlicense
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gdptools-feedstock/blob/main/LICENSE.txt)
 
 Summary: Gdptools
 
