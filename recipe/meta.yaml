@@ -1,5 +1,5 @@
 {% set name = "gdptools" %}
-{% set version = "0.2" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gdptools-{{ version }}.tar.gz
-  sha256: a27a7b4e360d061fa7ee0b9312f45131e18458d7edcbbc3fcf801f22a3286748
+  sha256: 74d3d9e996240f00bc3e97c76846f5d76077be10f878c8e26a25c5e7b1fc74ab
 
 build:
   entry_points:
@@ -22,6 +22,7 @@ requirements:
     - pip
     - poetry-core >=1.0.0
   run:
+    - bump2version >=1.0.1,<2.0.0
     - python >=3.8,<=3.11
     - dask-core >=2022.0.0
     - fastparquet >=0.4.0
@@ -35,7 +36,7 @@ requirements:
     - pyproj >=3.3.0
     - metpy >=1.2.0
     - attrs >=20.3,<22
-    - pydantic >=1.9.0
+    - pydantic <2.0,>=1.9.0
     - xarray >=2022.6.0
     - netcdf4 >=1.5.8
     - scipy >=1.9.0
