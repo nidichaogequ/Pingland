@@ -26,7 +26,7 @@ requirements:
     # - bump2version >=1.0.1,<2.0.0
     - statsmodels >=0.14.0,<0.15.0
     - dask-core <=2023.8.1
-    - python >=3.9,<=3.12
+    - python >=3.9,<3.12
     - fastparquet >=0.4.0
     - pyarrow >=1.0.1
     - dask-geopandas >=0.2.0
