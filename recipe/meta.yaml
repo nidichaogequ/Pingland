@@ -14,7 +14,7 @@ build:
     - gdptools = gdptools.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -32,7 +32,7 @@ requirements:
     - tqdm >=4.66.2,<5.0.0
     - statsmodels >=0.14.0,<0.15.0
     - dask-core >=2024.7.1,<2025.0.0
-    # - python >=3.9,<3.12
+    - python >=3.9,<3.13
     - fastparquet >=2024.2.0
     - pyarrow <17.0.0
     - dask-geopandas 0.4.1
