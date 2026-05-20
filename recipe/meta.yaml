@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<=3.12
+    - python {{ python_min }}
     - pip
     - poetry-core >=1.0.0
   run:
@@ -32,7 +32,7 @@ requirements:
     - tqdm >=4.66.2,<5.0.0
     - statsmodels >=0.14.0,<0.15.0
     - dask-core >=2024.7.1,<2025.0.0
-    - python >=3.9,<=3.12
+    - python >={{ python_min }}
     - fastparquet >=2024.2.0
     - pyarrow <17.0.0
     - dask-geopandas 0.4.1
@@ -72,6 +72,7 @@ test:
     # - pip check
     - gdptools --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
