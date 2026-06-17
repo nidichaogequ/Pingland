@@ -1,5 +1,5 @@
 {% set name = "gdptools" %}
-{% set version = "0.2.14" %}
+{% set version = "0.2.15" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gdptools-{{ version }}.tar.gz
-  sha256: 482f162396e2c499140fd94ab4633e5fcc7b18b93f385c289032992f26c7d4dc
+  sha256: 40e2de7ff141c72d5742df6444560654386148f6b7b4ca8ae1ff4ff08b8a83d0
 
 build:
   entry_points:
@@ -35,7 +35,7 @@ requirements:
     - dask-core >=2024.7.1,<2025.0.0
     - python >={{ python_min }}
     - fastparquet >=2024.2.0
-    - pyarrow <17.0.0
+    - pyarrow <18.1.1
     - dask-geopandas 0.4.1
     - pandas >=2.0.0
     - numpy <2.0
