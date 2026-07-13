@@ -1,5 +1,5 @@
 {% set name = "gdptools" %}
-{% set version = "0.2.16" %}
+{% set version = "0.2.17" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gdptools-{{ version }}.tar.gz
-  sha256: 0aeac534a12fecb65af50284c26023c632d3b6a15fbec801741204aafe08dc4e
+  sha256: 021d18613365538ba1a4a0d6075124e36ee9cdd42b5447957d9880f13288c3d9
 
 build:
   entry_points:
@@ -38,7 +38,7 @@ requirements:
     - pyarrow <18.1.1
     - dask-geopandas 0.4.1
     - pandas >=2.0.0
-    - numpy <2.0
+    - numpy >2.0
     - geopandas >=0.13.0
     - shapely >=2.0
     # - pygeos >=0.14.0,<0.15.0
@@ -51,7 +51,7 @@ requirements:
     - scipy >=1.13.0,<2.0.0
     - pydap >=3.2.2,<4.0.0
     - zarr >=2.12.0
-    - rasterio >=1.2.9
+    - rasterio >=1.2.9,<1.4.0
     - bottleneck >=1.3.3
     - dask >=2022.0.0
     - joblib >=1.4.0
