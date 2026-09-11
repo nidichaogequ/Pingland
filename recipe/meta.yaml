@@ -1,5 +1,5 @@
 {% set name = "gdptools" %}
-{% set version = "0.2.18" %}
+{% set version = "0.2.20" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gdptools-{{ version }}.tar.gz
-  sha256: f6d28869342447fee02fceebf48847367a1adfe32b74a61095a45b76656f98d6
+  sha256: 37091a6362a85caaefa3a910919b0aa2ef03fa12fc836c5afe2decc2a8f00f43
 
 build:
   entry_points:
@@ -28,7 +28,7 @@ requirements:
     - dask >=2022.0.0
     - dask-core >2024.8.0
     - dask-geopandas >0.4.1
-    - fastparquet >=2024.2.0
+    - fastparquet >=2024.2,<2025.0
     - geopandas >=0.13.0
     - geoviews >=1.12.0,<2.0.0
     - joblib >=1.4.0
@@ -36,20 +36,20 @@ requirements:
     - netcdf4 >=1.5.8
     - numpy >2.0
     - pandas >=2.0.0
-    - pyarrow <18.1.1
-    - pydantic >=1.10.5,<2.0.0
+    - pyarrow >=10.0.0,<18.0.0
+    - pydantic >=2
     - pydap >=3.2.2,<4.0.0
     - pyproj >=3.3.0
-    - pystac >=1.10.0,<2.0.0
+    - pystac >=1.10,<2.0
     - rasterio >=1.2.9,<1.5.0
-    - rioxarray >=0.13.0
+    - rioxarray >=0.15,<0.16
     - s3fs >=2025.2.0,<2026.0.0
     - scipy >=1.13.0,<2.0.0
     - shapely >=2.0
-    - statsmodels >=0.14.0,<0.15.0
+    - statsmodels >=0.14,<1.0
     - tqdm >=4.66.2,<5.0.0
     - urllib3 >=1.26.0,<2.0.0
-    - xarray 2024.7.0
+    - xarray >=2024.7.0,<2025.0.0
     - xpystac >=0.1.3,<0.2.0
     - zarr >=2.12.0
     # - attrs >=20.3,<22
